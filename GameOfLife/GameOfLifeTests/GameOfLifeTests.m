@@ -7,8 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Cell.h"
 
-@interface GameOfLifeTests : XCTestCase
+@interface GameOfLifeTests : XCTestCase{
+int _generation;
+BOOL _alive;
+int _neighbours;
+}
 
 @end
 
@@ -26,9 +31,76 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void) testLiveWhenHasTwoNeighbours
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    //Given
+    [self setCellWithNeighbours:2];
+    
+    // When
+    [self nextGeneration];
+    
+    //Then
+    XCTAssertTrue(_alive, @"");
+    
 }
+
+- (void) testDieWhenHasLessThanTwoNeighbours
+{
+    //Given
+    [self setCellWithNeighbours:0];
+    
+    
+    // When
+    [self nextGeneration];
+    
+    //Then
+    XCTAssertTrue(!_alive, @"");
+    
+}
+
+- (void) testDieWhenHasFourNeighbours
+{
+    //Given
+    [self setCellWithNeighbours:4];
+    
+    
+    // When
+    [self nextGeneration];
+    
+    //Then
+    XCTAssertTrue(!_alive, @"");
+    
+}
+
+#pragma mark - CELL method
+- (void) setCellWithNeighbours: (int) neighbours
+{
+    _generation = 1;
+    _alive = YES;
+    _neighbours = neighbours;
+}
+
+-(void) diedCell
+{
+    _alive = NO;
+}
+
+#pragma mark - LOGIC methods
+- (void) nextGeneration
+{
+    _generation++;
+    
+    [self updateState];
+}
+
+-(void) updateState
+{
+    if(_neighbours<2 || _neighbours==4)
+    {
+        [self diedCell];
+    }
+}
+
+
 
 @end
