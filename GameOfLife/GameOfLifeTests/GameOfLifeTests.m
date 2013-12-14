@@ -27,18 +27,44 @@
     [super tearDown];
 }
 
-- (void)cellIsAlive
+- (void)testInitCellAlive
 {
     Cell *cell = [[Cell alloc] initCellAlive: YES];
     
     XCTAssertTrue(cell.alive, @"Cell is not alive");
 }
 
-- (void)cellIsDead
+- (void)testInitCellDead
 {
     Cell *cell = [[Cell alloc] initCellAlive: NO];
     
     XCTAssertFalse(cell.alive, @"Cell is not dead");
 }
 
+- (void)testCellIsAliveWithLessTwoAliveNeighbors
+{
+    Cell *cell = [[Cell alloc] initCellAlive: YES];
+    
+    [cell updateStatusWithAliveNeighbors: 1];
+    
+    XCTAssertFalse(cell.alive, @"Cell is not dead");
+}
+
+//(void)testCellIsAliveWithMoreThreeAliveNeighbors
+//{
+//    Cell *cell = [[Cell alloc] initCellAlive: YES];
+//    XCTAssertFalse(cell.alive, @"Cell is not dead");
+//}
+//
+//(void)testCellIsAliveWithTwoOrThreeAliveNeighborhood
+//{
+//    Cell *cell = [[Cell alloc] initCellAlive: YES];
+//    XCTAssertTrue(cell.alive, @"Cell is not dead");
+//}
+//
+//(void)testCellIsDeadWithThreeAliveNeighborhood
+//{
+//    Cell *cell = [[Cell alloc] initCellAlive: NO];
+//    XCTAssertTrue(cell.alive, @"Cell is not dead");
+//}
 @end

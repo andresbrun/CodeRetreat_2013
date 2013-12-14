@@ -19,4 +19,9 @@
     return self;
 }
 
+- (void) updateStatusWithAliveNeighbors: (int) neighbor
+{
+    self.alive = NO;
+}
+
 @end

@@ -14,4 +14,6 @@
 
 - (id) initCellAlive: (BOOL) alive;
 
+- (void) updateStatusWithAliveNeighbors: (int) neighbor;
+
 @end
