@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) BOOL alive;
 
-- (id) initCell;
+- (id) initCellAlive: (BOOL) alive;
 
 @end

@@ -10,11 +10,11 @@
 
 @implementation Cell
 
-- (id) initCell
+- (id) initCellAlive: (BOOL) alive
 {
     self = [super init];
     
-    self.alive = YES;
+    self.alive = alive;
     
     return self;
 }

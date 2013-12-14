@@ -29,10 +29,16 @@
 
 - (void)cellIsAlive
 {
-    Cell *cell = [[Cell alloc] initCell];
-    
+    Cell *cell = [[Cell alloc] initCellAlive: YES];
     
     XCTAssertTrue(cell.alive, @"Cell is not alive");
+}
+
+- (void)cellIsDead
+{
+    Cell *cell = [[Cell alloc] initCellAlive: NO];
+    
+    XCTAssertFalse(cell.alive, @"Cell is not dead");
 }
 
 @end
