@@ -114,6 +114,8 @@
 		3C597678185C5565006360E8 /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				3C5976AA185C5755006360E8 /* Logics */,
+				3C5976AB185C5755006360E8 /* Models */,
 				3C597681185C5565006360E8 /* AppDelegate.h */,
 				3C597682185C5565006360E8 /* AppDelegate.m */,
 				3C597684185C5565006360E8 /* Main_iPhone.storyboard */,
@@ -153,6 +155,20 @@
 				3C59769D185C5565006360E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C5976AA185C5755006360E8 /* Logics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logics;
+			sourceTree = "<group>";
+		};
+		3C5976AB185C5755006360E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
