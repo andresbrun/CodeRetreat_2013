@@ -72,9 +72,13 @@
     XCTAssertTrue(cell.alive, @"Cell WithAliveNeighbors: 3 is dead");
 }
 
-//(void)testCellIsDeadWithThreeAliveNeighborhood
-//{
-//    Cell *cell = [[Cell alloc] initCellAlive: NO];
-//    XCTAssertTrue(cell.alive, @"Cell is not dead");
-//}
+- (void)testCellIsDeadWithThreeAliveNeighborhood
+{
+    Cell *cell = [[Cell alloc] initCellAlive: NO];
+    
+    [cell updateStatusWithAliveNeighbors: 3];
+    
+    XCTAssertTrue(cell.alive, @"Cell is dead");
+}
+
 @end
