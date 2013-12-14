@@ -22,6 +22,8 @@
 		3C597697185C5565006360E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C597676185C5565006360E8 /* UIKit.framework */; };
 		3C59769F185C5565006360E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C59769D185C5565006360E8 /* InfoPlist.strings */; };
 		3C5976A1185C5565006360E8 /* GameOfLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5976A0185C5565006360E8 /* GameOfLifeTests.m */; };
+		3C5976AE185C58FA006360E8 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5976AD185C58FA006360E8 /* Cell.m */; };
+		3C5976AF185C58FA006360E8 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5976AD185C58FA006360E8 /* Cell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3C59769C185C5565006360E8 /* GameOfLifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameOfLifeTests-Info.plist"; sourceTree = "<group>"; };
 		3C59769E185C5565006360E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C5976A0185C5565006360E8 /* GameOfLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameOfLifeTests.m; sourceTree = "<group>"; };
+		3C5976AC185C58FA006360E8 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		3C5976AD185C58FA006360E8 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		3C5976AB185C5755006360E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3C5976AC185C58FA006360E8 /* Cell.h */,
+				3C5976AD185C58FA006360E8 /* Cell.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C59768C185C5565006360E8 /* ViewController.m in Sources */,
+				3C5976AE185C58FA006360E8 /* Cell.m in Sources */,
 				3C597683185C5565006360E8 /* AppDelegate.m in Sources */,
 				3C59767F185C5565006360E8 /* main.m in Sources */,
 			);
@@ -280,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5976A1185C5565006360E8 /* GameOfLifeTests.m in Sources */,
+				3C5976AF185C58FA006360E8 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

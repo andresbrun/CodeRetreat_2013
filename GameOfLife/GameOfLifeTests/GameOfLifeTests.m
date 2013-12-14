@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Cell.h"
 
 @interface GameOfLifeTests : XCTestCase
 
@@ -26,9 +27,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)cellIsAlive
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    Cell *cell = [[Cell alloc] initCell];
+    
+    
+    XCTAssertTrue(cell.alive, @"Cell is not alive");
 }
 
 @end
