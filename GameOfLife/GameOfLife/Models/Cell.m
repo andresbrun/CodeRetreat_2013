@@ -21,7 +21,12 @@
 
 - (void) updateStatusWithAliveNeighbors: (int) neighbor
 {
-    self.alive = NO;
+    if(neighbor>1 && neighbor<4){
+        self.alive = YES;
+    }else{
+        self.alive = NO;
+    }
+    
 }
 
 @end
